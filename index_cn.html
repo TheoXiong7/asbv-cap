@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ASB Ventures — STEM Venture Capital</title>
+<title>澳银资本（ASB Ventures）— 科技风险投资</title>
 <link rel="icon" type="image/png" href="assets/favicon.png" />
 <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
 <link rel="apple-touch-icon" href="assets/favicon.png" />
@@ -15,34 +15,34 @@
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 <style>
   :root{
-    --paper:#0F0F0E;        /* dark base */
+    --paper:#0F0F0E;
     --paper-2:#17171A;
-    --ink:#F5E9C8;          /* warm ivory type */
+    --ink:#F5E9C8;
     --ink-2:#C9BFA3;
     --muted:#7A7363;
     --rule:#2A2925;
     --rule-soft:#1E1D1A;
-    --yellow:#FDD100;       /* ASBV yellow (from crest) */
-    --yellow-2:#E6C048;     /* softer gold */
+    --yellow:#FDD100;
+    --yellow-2:#E6C048;
     --accent:#FDD100;
     --accent-2:#8A6A1F;
-    --accent-ink:#FDD100;   /* accent when used as TEXT on paper — same as yellow in dark */
+    --accent-ink:#FDD100;
     --accent-ink-soft:#E6C048;
     --gold:#E6C048;
-    --deep:#08080A;         /* deeper panels — footer, map bg */
-    --on-yellow:#0F0F0E;    /* text color over yellow */
-    --faded:#6A6555;        /* tertiary text e.g. copyright */
+    --deep:#08080A;
+    --on-yellow:#0F0F0E;
+    --faded:#6A6555;
     --yellow-soft:rgba(253,209,0,0.12);
     --yellow-grid:rgba(253,209,0,0.08);
     --card:#17171A;
     --card-hover:#1C1C20;
   }
   body.light{
-    --paper:#E8DFCB;        /* sand */
-    --paper-2:#EFE7D3;      /* lighter sand card */
-    --ink:#1A1712;          /* near-black warm */
-    --ink-2:#2E281F;        /* darker for body contrast */
-    --muted:#6E6450;        /* darker muted */
+    --paper:#E8DFCB;
+    --paper-2:#EFE7D3;
+    --ink:#1A1712;
+    --ink-2:#2E281F;
+    --muted:#6E6450;
     --rule:#C7BDA4;
     --rule-soft:#D9CFB5;
     --accent-2:#5A3E0A;
@@ -52,14 +52,12 @@
     --yellow-grid:rgba(122,78,10,0.14);
     --card:#EFE7D3;
     --card-hover:#E3D9BF;
-    /* Light mode: keep crest yellow as FILL; accent TEXT is deep ink, highlighted yellow behind key words */
     --yellow:#FDD100;
     --yellow-2:#E6C048;
     --accent:#FDD100;
     --accent-ink:#1A1712;
     --accent-ink-soft:#3A2E1A;
   }
-  /* Yellow-highlight marker on italic accent words in light mode */
   body.light .hl,
   body.light h1 em,
   body.light h2 em,
@@ -76,27 +74,22 @@
     border-radius:2px;
   }
   *{box-sizing:border-box}
-  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"ss01","cv11";overflow-x:hidden}
-  body{font-size:15px;line-height:1.55;letter-spacing:-0.005em}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:'Noto Sans SC','Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-feature-settings:"ss01","cv11";overflow-x:hidden}
+  body{font-size:15px;line-height:1.55;letter-spacing:0}
   a{color:inherit;text-decoration:none}
-  .serif{font-family:'Instrument Serif',serif;font-weight:400;letter-spacing:-0.01em}
+  .serif{font-family:'Noto Serif SC','Instrument Serif',serif;font-weight:500;letter-spacing:0}
   .mono{font-family:'JetBrains Mono',ui-monospace,monospace;font-variant-ligatures:none}
-  /* Chinese-mode typography */
-  body.zh{font-family:'Noto Sans SC','Inter Tight',system-ui,sans-serif;letter-spacing:0}
-  body.zh h1,body.zh h2,body.zh h3,body.zh h4,body.zh h5,body.zh .serif,body.zh blockquote{font-family:'Noto Serif SC','Instrument Serif',serif;letter-spacing:0;font-weight:500}
-  body.zh h1 em,body.zh h2 em,body.zh h3 em,body.zh .serif em{font-style:normal;color:var(--accent-ink)}
-  body.zh .mono,body.zh .eyebrow{font-family:'JetBrains Mono',ui-monospace,monospace}
+  body h1,body h2,body h3,body h4,body h5,body blockquote{font-family:'Noto Serif SC','Instrument Serif',serif;letter-spacing:0;font-weight:500}
+  body h1 em,body h2 em,body h3 em,body .serif em{font-style:normal;color:var(--accent-ink)}
   .eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
   .rule{height:1px;background:var(--rule)}
   .rule-soft{height:1px;background:var(--rule-soft)}
   .container{max-width:1360px;margin:0 auto;padding:0 32px}
   @media (max-width:720px){.container{padding:0 20px}}
-  /* grain */
   body::before{
     content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.22;mix-blend-mode:overlay;
     background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.8 0 0 0 0 0.3 0 0 0 0.08 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
   }
-  /* no outline on clicks */
   button{font-family:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
 
   /* TICKER */
@@ -114,7 +107,7 @@
   .logo{display:flex;align-items:center;gap:14px;min-width:0}
   .logo-mark{width:46px;height:46px;display:grid;place-items:center;overflow:hidden;flex:0 0 auto}
   .logo-mark img{width:100%;height:100%;object-fit:contain;display:block}
-  .logo-wm{font-family:'Instrument Serif',serif;font-size:22px;letter-spacing:-0.01em;line-height:1;color:var(--accent-ink)}
+  .logo-wm{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:22px;letter-spacing:0;line-height:1;color:var(--accent-ink);font-weight:600}
   .logo-sub{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase;margin-top:4px}
   .nav-links{display:flex;gap:30px;align-items:center}
   .nav-links a{font-size:13.5px;color:var(--ink-2);letter-spacing:-0.005em;position:relative;padding:26px 0;cursor:pointer}
@@ -125,15 +118,8 @@
   .pill:hover{background:var(--accent-ink);color:var(--paper)}
   .pill.ghost{border-color:var(--rule);color:var(--ink-2)}
   .pill.ghost:hover{background:transparent;color:var(--accent-ink);border-color:var(--accent-ink)}
-  /* Light mode: keep yellow visible on pills, but use dark text for accent */
   body.light .pill{border-color:var(--ink);color:var(--ink)}
   body.light .pill:hover{background:var(--yellow);color:var(--on-yellow);border-color:var(--yellow)}
-  .lang{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.1em}
-  .lang b{color:var(--accent-ink)}
-  .lang-toggle{cursor:pointer;padding:8px 10px;border:1px solid var(--rule);border-radius:999px;background:transparent;transition:border-color .15s}
-  .lang-toggle:hover{border-color:var(--accent-ink)}
-  .lang-toggle b{color:var(--muted);font-weight:500;transition:color .15s}
-  .lang-toggle b.on{color:var(--accent-ink);font-weight:700}
   .theme-toggle{display:inline-grid;place-items:center;width:34px;height:34px;border:1px solid var(--rule);border-radius:999px;background:transparent;color:var(--ink-2);transition:border-color .15s,color .15s,transform .3s}
   .theme-toggle:hover{border-color:var(--accent-ink);color:var(--accent-ink)}
   .theme-toggle svg{display:block;transition:transform .3s}
@@ -186,7 +172,7 @@
   .mega.open{max-height:360px;opacity:1}
   .mega-grid{display:grid;grid-template-columns:1.2fr 2fr;gap:0;padding:32px 0 40px}
   .mega-left{padding-right:40px;border-right:1px solid var(--rule-soft)}
-  .mega-left h4{font-family:'Instrument Serif',serif;font-size:28px;margin:0 0 8px;font-weight:400}
+  .mega-left h4{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:28px;margin:0 0 8px;font-weight:500}
   .mega-left p{font-size:13px;color:var(--muted);margin:0;max-width:40ch}
   .mega-right{padding-left:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
   .mega-col h5{font-size:11px;font-family:'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 14px;font-weight:500}
@@ -198,12 +184,12 @@
   .hero{padding:80px 0 90px;position:relative}
   .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:end}
   @media(max-width:1100px){.hero-grid{grid-template-columns:1fr}}
-  .hero h1{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(56px,8.4vw,128px);line-height:0.94;letter-spacing:-0.025em;margin:0}
-  .hero h1 em{font-style:italic;color:var(--accent-ink)}
-  .hero h1 .amp{font-style:italic;color:var(--accent-ink);font-weight:400}
+  .hero h1{font-family:'Noto Serif SC','Instrument Serif',serif;font-weight:500;font-size:clamp(56px,8.4vw,128px);line-height:0.94;letter-spacing:0;margin:0}
+  .hero h1 em{color:var(--accent-ink)}
+  .hero h1 .amp{color:var(--accent-ink);font-weight:500}
   .hero-meta{display:flex;gap:32px;margin-top:40px;padding-top:28px;border-top:1px solid var(--rule);flex-wrap:wrap}
   .hero-meta .item{display:flex;flex-direction:column;gap:4px}
-  .hero-meta .item b{font-family:'Instrument Serif',serif;font-size:28px;font-weight:400;line-height:1}
+  .hero-meta .item b{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:28px;font-weight:500;line-height:1}
   .hero-meta .item span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-family:'JetBrains Mono',monospace}
   .hero-side{border-left:1px solid var(--rule);padding-left:32px;align-self:end}
   .hero-side .tag{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
@@ -223,8 +209,8 @@
   .section{padding:90px 0;border-top:1px solid var(--rule)}
   .section-hd{display:grid;grid-template-columns:1.5fr 2fr;gap:48px;align-items:end;margin-bottom:56px}
   @media(max-width:900px){.section-hd{grid-template-columns:1fr;gap:24px}}
-  .section-hd h2{font-family:'Instrument Serif',serif;font-size:clamp(40px,5vw,72px);line-height:0.98;letter-spacing:-0.02em;margin:0;font-weight:400}
-  .section-hd h2 em{font-style:italic;color:var(--accent-ink)}
+  .section-hd h2{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:clamp(40px,5vw,72px);line-height:0.98;letter-spacing:0;margin:0;font-weight:500}
+  .section-hd h2 em{color:var(--accent-ink)}
   .section-hd .right{font-size:16px;color:var(--ink-2);max-width:52ch;line-height:1.55}
   .section-hd .meta{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;display:flex;gap:14px;align-items:center}
   .section-hd .meta i{width:28px;height:1px;background:var(--yellow)}
@@ -234,9 +220,8 @@
   @media(max-width:900px){.nums{grid-template-columns:repeat(2,1fr)}}
   .nums .cell{padding:36px 28px;border-right:1px solid var(--rule-soft);position:relative;overflow:hidden}
   .nums .cell:last-child{border-right:0}
-  .nums .cell .k{font-family:'Instrument Serif',serif;font-size:72px;line-height:0.95;letter-spacing:-0.02em;font-weight:400}
-  .nums .cell .k{color:var(--accent-ink)}
-  .nums .cell .k sup{font-size:28px;vertical-align:top;display:inline-block;margin-left:2px;color:var(--ink-2);font-style:italic}
+  .nums .cell .k{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:72px;line-height:0.95;letter-spacing:0;font-weight:500;color:var(--accent-ink)}
+  .nums .cell .k sup{font-size:28px;vertical-align:top;display:inline-block;margin-left:2px;color:var(--ink-2);font-style:normal}
   .nums .cell .l{font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;margin-top:14px}
   .nums .cell .d{font-size:13px;color:var(--ink-2);margin-top:10px;line-height:1.4}
 
@@ -248,7 +233,7 @@
   .sectors .s:hover{background:rgba(253,209,0,0.05)}
   .sectors .s:hover h3{color:var(--accent-ink)}
   .sectors .s .n{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.1em}
-  .sectors .s h3{font-family:'Instrument Serif',serif;font-size:26px;line-height:1.1;letter-spacing:-0.01em;font-weight:400;margin:14px 0 10px;transition:color .2s}
+  .sectors .s h3{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:26px;line-height:1.1;letter-spacing:0;font-weight:500;margin:14px 0 10px;transition:color .2s}
   .sectors .s p{font-size:13px;color:var(--ink-2);line-height:1.5;margin:0}
   .sectors .s .companies{margin-top:18px;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);letter-spacing:.06em}
 
@@ -266,7 +251,7 @@
   .pf-card .pf-top{display:flex;justify-content:space-between;align-items:flex-start}
   .pf-card .pf-ticker{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);letter-spacing:.08em}
   .pf-card .pf-tag{font-family:'JetBrains Mono',monospace;font-size:10px;padding:2px 8px;border:1px solid var(--rule);border-radius:999px;color:var(--ink-2);letter-spacing:.06em}
-  .pf-card h4{font-family:'Instrument Serif',serif;font-size:26px;line-height:1.05;margin:22px 0 6px;font-weight:400;letter-spacing:-0.01em}
+  .pf-card h4{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:26px;line-height:1.05;margin:22px 0 6px;font-weight:500;letter-spacing:0}
   .pf-card .pf-sector{font-size:12.5px;color:var(--ink-2)}
   .pf-card .pf-meta{display:flex;justify-content:space-between;margin-top:18px;padding-top:14px;border-top:1px solid var(--rule-soft);font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);letter-spacing:.05em}
   .pf-card .pf-status-listed{color:var(--accent-ink)}
@@ -285,7 +270,7 @@
   .member:hover .ph{filter:grayscale(0) contrast(1) brightness(1)}
   .member:hover h4{color:var(--accent-ink)}
   .member h4{transition:color .2s}
-  .member h4{font-family:'Instrument Serif',serif;font-size:22px;font-weight:400;margin:16px 0 4px;letter-spacing:-0.01em}
+  .member h4{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:22px;font-weight:500;margin:16px 0 4px;letter-spacing:0}
   .member .role{font-size:12.5px;color:var(--muted);line-height:1.4}
   .member .bio-open{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--accent-ink);letter-spacing:.08em;margin-top:10px;display:inline-flex;align-items:center;gap:6px;text-transform:uppercase}
   .member .bio-open::after{content:"→";transition:transform .15s}
@@ -299,7 +284,7 @@
   .modal-body .mph{aspect-ratio:4/5;background-size:cover;background-position:center top}
   .modal-body .mtxt{padding:48px 44px}
   .modal-body .mtxt small{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-  .modal-body .mtxt h3{font-family:'Instrument Serif',serif;font-size:44px;margin:6px 0 4px;font-weight:400;letter-spacing:-0.015em;color:var(--accent-ink)}
+  .modal-body .mtxt h3{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:44px;margin:6px 0 4px;font-weight:600;letter-spacing:0;color:var(--accent-ink)}
   .modal-body .mtxt .r{font-size:13.5px;color:var(--ink-2)}
   .modal-body .mtxt hr{border:0;border-top:1px solid var(--rule);margin:24px 0}
   .modal-body .mtxt p{font-size:14.5px;line-height:1.65;color:var(--ink-2);margin:0 0 14px}
@@ -308,10 +293,10 @@
   /* Philosophy */
   .philosophy{display:grid;grid-template-columns:1.3fr 2fr;gap:64px}
   @media(max-width:900px){.philosophy{grid-template-columns:1fr}}
-  .philosophy-left h3{font-family:'Instrument Serif',serif;font-size:48px;line-height:1;font-weight:400;margin:0 0 20px;letter-spacing:-0.02em}
-  .philosophy-left h3 em{font-style:italic;color:var(--accent-ink)}
+  .philosophy-left h3{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:48px;line-height:1;font-weight:600;margin:0 0 20px;letter-spacing:0}
+  .philosophy-left h3 em{color:var(--accent-ink)}
   .philosophy-left p{font-size:15px;color:var(--ink-2);line-height:1.6;margin:0 0 16px}
-  .philosophy-left .quote{border-left:2px solid var(--yellow);padding:4px 0 4px 20px;margin-top:30px;font-family:'Instrument Serif',serif;font-style:italic;font-size:22px;line-height:1.3;color:var(--ink)}
+  .philosophy-left .quote{border-left:2px solid var(--yellow);padding:4px 0 4px 20px;margin-top:30px;font-family:'Noto Serif SC','Instrument Serif',serif;font-style:normal;font-size:22px;line-height:1.3;color:var(--ink)}
   .principles{display:grid;grid-template-columns:1fr}
   .principles .p{display:grid;grid-template-columns:60px 1fr auto;gap:18px;padding:22px 0;border-top:1px solid var(--rule);cursor:pointer;align-items:baseline;transition:padding .2s}
   .principles .p:first-child{border-top:1px solid var(--yellow)}
@@ -321,7 +306,7 @@
   .principles .p h5{transition:color .2s}
   .principles .p.open h5{color:var(--accent-ink)}
   .principles .p .n{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:.08em}
-  .principles .p h5{font-family:'Instrument Serif',serif;font-size:26px;line-height:1.15;font-weight:400;margin:0 0 8px;letter-spacing:-0.01em}
+  .principles .p h5{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:26px;line-height:1.15;font-weight:600;margin:0 0 8px;letter-spacing:0}
   .principles .p .body{overflow:hidden;max-height:0;transition:max-height .3s,margin .3s;font-size:14px;color:var(--ink-2);line-height:1.6;margin:0}
   .principles .p.open .body{max-height:160px;margin-top:10px}
   .principles .p .plus{width:22px;height:22px;border:1px solid var(--accent-ink);border-radius:50%;display:grid;place-items:center;font-size:12px;transition:transform .3s,background .2s;color:var(--accent-ink)}
@@ -332,20 +317,20 @@
   @media(max-width:900px){.chairman{grid-template-columns:1fr}}
   .chairman-ph{aspect-ratio:3/4;background-size:cover;background-position:center top;border:1px solid var(--yellow);filter:grayscale(0.1) contrast(1.03)}
   .chairman .txt{padding:8px 0}
-  .chairman blockquote{font-family:'Instrument Serif',serif;font-size:clamp(32px,3.4vw,46px);line-height:1.15;margin:0 0 36px;font-weight:400;letter-spacing:-0.015em}
-  .chairman blockquote em{font-style:italic;color:var(--accent-ink)}
-  .chairman blockquote::before{content:"“";font-size:72px;line-height:0;margin-right:6px;color:var(--accent-ink);font-style:italic;vertical-align:-24px}
+  .chairman blockquote{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:clamp(32px,3.4vw,46px);line-height:1.15;margin:0 0 36px;font-weight:600;letter-spacing:0}
+  .chairman blockquote em{color:var(--accent-ink)}
+  .chairman blockquote::before{content:"“";font-size:72px;line-height:0;margin-right:6px;color:var(--accent-ink);font-style:normal;vertical-align:-24px}
   .chairman .sign{display:flex;align-items:flex-end;justify-content:space-between;padding-top:22px;border-top:1px solid var(--rule)}
   .chairman .sign div small{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:block}
-  .chairman .sign div b{font-family:'Instrument Serif',serif;font-size:24px;font-weight:400;letter-spacing:-0.01em}
+  .chairman .sign div b{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:24px;font-weight:600;letter-spacing:0}
   .chairman .sign a{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;text-decoration:underline;text-underline-offset:4px}
 
   /* History */
   .history{display:grid;grid-template-columns:1fr;border-top:1px solid var(--yellow);border-bottom:1px solid var(--yellow)}
   .history .row{display:grid;grid-template-columns:160px 1fr 1fr;gap:32px;padding:26px 0;border-top:1px solid var(--rule);align-items:baseline}
   .history .row:first-child{border-top:0}
-  .history .row .yr{font-family:'Instrument Serif',serif;font-size:44px;line-height:1;letter-spacing:-0.015em;color:var(--accent-ink)}
-  .history .row h5{font-family:'Instrument Serif',serif;font-size:22px;line-height:1.2;font-weight:400;margin:0;letter-spacing:-0.01em}
+  .history .row .yr{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:44px;line-height:1;letter-spacing:0;color:var(--accent-ink);font-weight:600}
+  .history .row h5{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:22px;line-height:1.2;font-weight:600;margin:0;letter-spacing:0}
   .history .row p{font-size:13.5px;color:var(--ink-2);margin:0;line-height:1.55}
 
   /* News */
@@ -357,7 +342,7 @@
   .news-grid article:hover h4{color:var(--accent-ink)}
   .news-grid article .dt{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.08em;display:flex;gap:14px;align-items:center}
   .news-grid article .dt .tag{padding:2px 8px;border:1px solid var(--rule);border-radius:999px}
-  .news-grid article h4{font-family:'Instrument Serif',serif;font-size:30px;line-height:1.15;font-weight:400;margin:16px 0 14px;letter-spacing:-0.01em;transition:color .2s}
+  .news-grid article h4{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:30px;line-height:1.15;font-weight:600;margin:16px 0 14px;letter-spacing:0;transition:color .2s}
   .news-grid article.feature h4{font-size:40px}
   .news-grid article p{font-size:13.5px;color:var(--ink-2);line-height:1.55;margin:0 0 22px}
   .news-grid article .read{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;color:var(--accent-ink);text-transform:uppercase}
@@ -374,7 +359,7 @@
   .foot-grid h5{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 18px;font-weight:500}
   .foot-grid a{display:block;padding:6px 0;font-size:13.5px;color:var(--ink-2);transition:color .15s}
   .foot-grid a:hover{color:var(--accent-ink)}
-  .foot-brand .wm{font-family:'Instrument Serif',serif;font-size:48px;line-height:1;letter-spacing:-0.015em;color:var(--accent-ink);margin-bottom:16px}
+  .foot-brand .wm{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:48px;line-height:1;letter-spacing:0;color:var(--accent-ink);margin-bottom:16px;font-weight:700}
   .foot-brand p{font-size:13.5px;line-height:1.6;color:var(--muted);margin:0 0 22px;max-width:36ch}
   .foot-sub{display:flex;justify-content:space-between;padding-top:28px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--faded);letter-spacing:.08em;flex-wrap:wrap;gap:14px}
   .foot-sub a{color:var(--faded)}
@@ -402,7 +387,7 @@
   .contact-block{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--yellow)}
   @media(max-width:900px){.contact-block{grid-template-columns:1fr}}
   .contact-block .c-left{padding:44px;border-right:1px solid var(--rule)}
-  .contact-block .c-left h3{font-family:'Instrument Serif',serif;font-size:48px;line-height:1;font-weight:400;margin:0 0 24px;letter-spacing:-0.02em;color:var(--accent-ink)}
+  .contact-block .c-left h3{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:48px;line-height:1;font-weight:700;margin:0 0 24px;letter-spacing:0;color:var(--accent-ink)}
   .contact-block .c-left .row{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule);font-size:14px}
   .contact-block .c-left .row span{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;padding-top:2px}
   .contact-block .c-right{padding:44px;background:var(--deep);position:relative;overflow:hidden;min-height:420px}
@@ -421,286 +406,257 @@
   .paper:hover h4{color:var(--accent-ink)}
   .paper h4{transition:color .2s}
   .paper .hdr{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);letter-spacing:.08em;display:flex;justify-content:space-between}
-  .paper h4{font-family:'Instrument Serif',serif;font-size:26px;line-height:1.2;margin:0;font-weight:400;letter-spacing:-0.01em}
+  .paper h4{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:26px;line-height:1.2;margin:0;font-weight:600;letter-spacing:0}
   .paper .foot{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent-ink);letter-spacing:.08em;margin-top:auto;display:flex;justify-content:space-between;padding-top:14px;border-top:1px solid var(--rule)}
 
   /* cta band */
   .cta-band{background:var(--yellow);color:#0F0F0E;padding:90px 0;position:relative;overflow:hidden}
   .cta-band::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><path d='M0 40L40 0' stroke='%230F0F0E' stroke-width='0.5' opacity='0.08'/></svg>");}
   .cta-band .container{position:relative}
-  .cta-band h2{font-family:'Instrument Serif',serif;font-size:clamp(44px,6vw,92px);line-height:0.98;letter-spacing:-0.02em;margin:0;font-weight:400;max-width:20ch;color:#0F0F0E}
-  .cta-band h2 em{font-style:italic;color:#6B4F0A}
+  .cta-band h2{font-family:'Noto Serif SC','Instrument Serif',serif;font-size:clamp(44px,6vw,92px);line-height:0.98;letter-spacing:0;margin:0;font-weight:700;max-width:20ch;color:#0F0F0E}
+  .cta-band h2 em{color:#6B4F0A}
   .cta-band .sub{display:grid;grid-template-columns:1fr auto;gap:32px;margin-top:48px;padding-top:32px;border-top:1px solid rgba(15,15,14,.25);align-items:end}
   .cta-band p{max-width:52ch;font-size:15px;line-height:1.6;color:#2A2A27;margin:0}
-  .cta-band .btn{background:#0F0F0E;color:var(--yellow);padding:16px 28px;border-radius:999px;font-size:13px;letter-spacing:.02em;display:inline-flex;align-items:center;gap:10px;font-weight:500}
+  .cta-band .btn{background:#0F0F0E;color:var(--yellow);padding:16px 28px;border-radius:999px;font-size:13px;letter-spacing:.02em;display:inline-flex;align-items:center;gap:10px;font-weight:600}
 
-  /* loader init */
   .fadein{opacity:0;transform:translateY(14px);transition:opacity .7s,transform .7s}
   .fadein.in{opacity:1;transform:none}
 </style>
 </head>
-<body>
+<body class="zh">
 <div class="progress" id="progress"></div>
 <div id="root"></div>
 
 <script type="text/babel" data-presets="react">
-
 const { useState, useEffect, useRef, useMemo, createContext, useContext } = React;
 
-/* ————————————— i18n ————————————— */
-const LangCtx = createContext({ lang: "en", setLang: () => {} });
+/* 固定中文版（不做机器翻译切换） */
+const LangCtx = createContext({ lang: "zh" });
 const useLang = () => useContext(LangCtx);
 
 const ZH = {
   /* nav */
-  "About": "关于",
-  "Philosophy": "理念",
+  "About": "关于我们",
+  "Philosophy": "投资理念",
   "Portfolio": "投资组合",
   "Cases": "案例",
-  "News": "资讯",
+  "News": "动态",
   "Contact": "联系",
-  "Subscribe": "订阅",
+  "Subscribe": "订阅通讯",
   "EST. AUCKLAND 2003": "创立于奥克兰 · 2003",
   /* mega menus */
-  "A firm for the long horizon": "一家面向长周期的公司",
-  "Founded in Auckland in 2003. Managing capital on behalf of family trusts, institutional and individual LPs across the Asia-Pacific.": "2003年创立于奥克兰。为亚太地区的家族信托、机构与个人有限合伙人管理资本。",
-  "The firm": "公司",
+  "A firm for the long horizon": "面向长期的投资机构",
+  "Founded in Auckland in 2003. Managing capital on behalf of family trusts, institutional and individual LPs across the Asia-Pacific.": "2003 年创立于奥克兰。为亚太地区家族信托、机构与个人 LP 管理资本。",
+  "The firm": "机构",
   "People": "团队",
   "Governance": "治理",
-  "About ASBV": "关于澳银",
-  "History · 2003 → today": "历程 · 2003 → 今",
+  "About ASBV": "关于澳银资本",
+  "History · 2003 → today": "发展历程 · 2003 → 至今",
   "Chairman's Speech": "董事长致辞",
-  "Honors & recognition": "荣誉与奖项",
+  "Honors & recognition": "荣誉与认可",
   "Investment Committee": "投资决策委员会",
   "Managing Partners": "管理合伙人",
   "Full team directory": "团队名录",
   "Compliance": "合规",
   "Risk framework": "风险管理框架",
-  "Annual letter": "年度致辞",
+  "Annual letter": "年度信函",
   "Differentiated. Balanced.": "差异化 · 均衡化",
-  "Our investment doctrine — from Chairman Xiong's 'Ten Commandments' to the firm's playbook for portfolio construction.": "公司的投资准则——自熊钢董事长的\"投资十诫\"，到组合构建的内部方法论。",
+  "Our investment doctrine — from Chairman Xiong's 'Ten Commandments' to the firm's playbook for portfolio construction.": "我们的投资准则——从熊钢董事长提出的「投资十诫」到组合构建的方法论。",
   "Doctrine": "准则",
   "Research": "研究",
-  "Media": "媒体",
+  "Media": "内容",
   "Ten Commandments": "投资十诫",
   "Investment Strategy": "投资策略",
   "Portfolio Model": "组合模型",
   "Active Management": "主动管理",
   "Working papers": "工作论文",
-  "Sector letters": "行业信件",
+  "Sector letters": "行业来信",
   "Field guides": "实务手册",
   "Venture Capital as a Faith": "风险投资是一种信仰",
   "Podcast archive": "播客档案",
-  "100+ companies, five sectors.": "一百余家企业，五大赛道。",
-  "A portfolio balanced across stage, sector and vintage — built deliberately over two decades of disciplined underwriting.": "在阶段、行业与基金代际间均衡构建的投资组合——二十余年严谨承销的成果。",
+  "100+ companies, five sectors.": "百余家企业 · 五大赛道",
+  "A portfolio balanced across stage, sector and vintage — built deliberately over two decades of disciplined underwriting.": "跨阶段、行业与代际均衡构建的投资组合——二十余年纪律化承销的结果。",
   "By sector": "按行业",
   "By outcome": "按结果",
-  "For founders": "给创始人",
-  "Public companies": "已上市企业",
+  "For founders": "面向创始人",
+  "Public companies": "上市公司",
   "Typical cases": "典型案例",
   "Exits & returns": "退出与回报",
   "How we invest": "我们如何投资",
   "Submit a plan": "提交商业计划书",
   /* hero */
-  "STEM Venture Capital · New Zealand   →   Shenzhen": "科技风险投资 · 新西兰 → 深圳",
-  "Early detecting.": "早期发现。",
-  "Investing": "先于",
-  "in advance.": "市场投资。",
-  "Balanced": "均衡",
-  "active.": "主动。",
-  "Chairman's Letter · 2026": "董事长致辞 · 2026",
-  "\"For twenty-three years we have practiced a single, boring doctrine: be early, be balanced, actively manage risk — and refuse to confuse motion for progress.\"": "\"二十三年来，我们只践行一条朴素的准则：走在前面、保持均衡、主动管理风险——拒绝把忙碌误认为进步。\"",
+  "Chairman's Letter · 2026": "董事长信函 · 2026",
+  "\"For twenty-three years we have practiced a single, boring doctrine: be early, be balanced, actively manage risk — and refuse to confuse motion for progress.\"": "“二十三年来，我们只做一件看似朴素的事：走在前面、保持均衡、主动管理风险——并拒绝把忙碌误认为进步。”",
   "Sam Xiong": "熊钢",
   "Founding Partner · Chairman": "创始合伙人 · 董事长",
-  "Read the letter": "阅读致辞",
-  "Founded, Auckland": "创立于奥克兰",
-  "Funds under management": "管理基金",
-  "Portfolio companies": "投资企业",
-  "Public-market outcomes": "公开市场退出",
+  "Read the letter": "阅读信函",
+  "Founded, Auckland": "创立 · 奥克兰",
+  "Funds under management": "在管基金",
+  "Portfolio companies": "被投企业",
+  "Public-market outcomes": "上市退出",
   /* sections */
   "By the numbers": "数据一览",
-  "What we invest in": "我们投资什么",
+  "What we invest in": "重点赛道",
   "Investment philosophy": "投资理念",
-  "Chairman's speech": "董事长演讲",
-  "Leadership": "领导团队",
-  "Timeline": "历程",
-  "Newsroom": "新闻",
-  "Correspondence": "联络",
+  "Chairman's speech": "董事长致辞",
+  "Leadership": "核心团队",
+  "Timeline": "发展历程",
+  "Newsroom": "新闻与动态",
+  "Correspondence": "联系",
   /* numbers */
-  "A firm measured in": "一家以",
-  "decades": "十年",
-  ", not rounds.": "丈量的公司，而非以轮次。",
-  "Since 2003, ASB Ventures has registered and managed more than fifteen venture capital funds, invested in over one hundred Chinese companies, and produced eight public-market outcomes across five sectors — with an operating team jointly led from Shenzhen and Auckland.": "自2003年成立至今，澳银资本已注册并管理十五只以上的风险投资基金，投资逾一百家中国企业，并在五个赛道取得八次公开市场退出——团队由深圳与奥克兰共同运营。",
+  "Since 2003, ASB Ventures has registered and managed more than fifteen venture capital funds, invested in over one hundred Chinese companies, and produced eight public-market outcomes across five sectors — with an operating team jointly led from Shenzhen and Auckland.": "自 2003 年成立以来，澳银资本已登记并管理 15 支以上风投基金，投资超过 100 家中国企业，并在五大赛道实现 8 次以上上市退出——团队由深圳与奥克兰协同运营。",
   "Capital under management": "管理规模",
   "RMB, across active and realized vehicles.": "人民币 · 在管与已退出基金合计。",
-  "Invested since the firm's founding in 2003.": "自2003年创立以来已投企业。",
-  "IPO outcomes": "上市退出",
-  "Shenzhen, Shanghai and Hong Kong listings.": "深交所、上交所与港交所挂牌。",
+  "Invested since the firm's founding in 2003.": "自 2003 年创立以来累计投资。",
+  "IPO outcomes": "IPO 退出",
+  "Shenzhen, Shanghai and Hong Kong listings.": "深交所、上交所与港交所上市。",
   "Target sectors": "重点行业",
-  "Medical, IT, AI, energy, business innovation.": "医疗、IT、人工智能、能源、商业创新。",
+  "Medical, IT, AI, energy, business innovation.": "医疗、信息技术、人工智能与智造、能源与环境科技、商业创新。",
   /* sectors */
-  "Five sectors,": "五个行业，",
-  "one": "共同遵循",
-  "operating doctrine.": "一套运营准则。",
-  "We invest where the science is genuinely ahead of the market — and where our operating network converts that asymmetry into capital-efficient companies. The firm is deliberately limited to five sectors so every investment committee member can speak to every position.": "我们投资真正领先于市场的科学——由我们的运营网络将这种不对称转化为资本高效的企业。公司刻意将投资范围限定于五个行业，以便投委会每一位成员都能评估每一笔投资。",
+  "We invest where the science is genuinely ahead of the market — and where our operating network converts that asymmetry into capital-efficient companies. The firm is deliberately limited to five sectors so every investment committee member can speak to every position.": "我们投资真正领先市场的科学与工程机会，并依托运营网络把技术优势转化为资本效率更高的企业。机构刻意将战场限定在五大赛道，确保投委会每一位成员都能对每一笔投资给出判断。",
   "Medical & Health": "医疗与健康",
   "Information Tech": "信息技术",
   "AI & Manufacture": "人工智能与智造",
   "Energy & Env. Tech": "能源与环境科技",
   "Business Innovation": "商业创新",
-  "Therapeutics, diagnostics, devices and cell therapy. The firm's largest and longest-running practice.": "药物、诊断、器械与细胞治疗。公司规模最大、历史最久的业务线。",
-  "Enterprise software, industrial IT and the computing fabric underneath China's productive economy.": "企业软件、工业IT与支撑中国实体经济的计算基础。",
-  "Vertical AI applied to physical plants, precision mechatronics, and adjacent frontier hardware.": "应用于工厂的垂直AI、精密机电与前沿硬件。",
-  "Decarbonization, ecological engineering and the industrial infrastructure of the energy transition.": "脱碳、生态工程与能源转型的产业基础设施。",
-  "Commerce, payments, creative IP and consumer-facing platforms operating across Asia and globally.": "商业、支付、创意IP与面向亚洲及全球的消费平台。",
+  "Therapeutics, diagnostics, devices and cell therapy. The firm's largest and longest-running practice.": "药物、诊断、器械与细胞治疗——机构规模最大、积累最深的实践。",
+  "Enterprise software, industrial IT and the computing fabric underneath China's productive economy.": "企业软件、工业 IT，以及支撑中国实体经济的计算底座。",
+  "Vertical AI applied to physical plants, precision mechatronics, and adjacent frontier hardware.": "面向产业现场的垂直 AI、精密机电与相关前沿硬件。",
+  "Decarbonization, ecological engineering and the industrial infrastructure of the energy transition.": "脱碳、生态工程，以及能源转型的产业基础设施。",
+  "Commerce, payments, creative IP and consumer-facing platforms operating across Asia and globally.": "商业、支付、内容/IP 与面向亚洲及全球的消费平台。",
   "28 COMPANIES": "28 家企业",
   "19 COMPANIES": "19 家企业",
   "22 COMPANIES": "22 家企业",
   "14 COMPANIES": "14 家企业",
   "17 COMPANIES": "17 家企业",
   /* portfolio */
-  "Two decades of": "二十年的",
-  "deliberate": "自觉",
-  "company-building.": "造企业。",
-  "Selected companies from the firm's active and realized portfolios. Eight have reached the public markets; many more are working their way through the long middle of that journey.": "精选在管与已退出组合中的代表性企业。其中八家已公开上市，更多仍在漫长的中段扎实前行。",
+  "Selected companies from the firm's active and realized portfolios. Eight have reached the public markets; many more are working their way through the long middle of that journey.": "从在管与已退出组合中选取的代表性企业。其中 8 家已登陆资本市场，更多企业仍在漫长的中段稳步推进。",
   "All": "全部",
   "Listed": "已上市",
   "Public": "上市",
   "Private": "非上市",
   "Active": "在管",
-  "Case →": "案例 →",
+  "Case →": "查看案例 →",
   "Open case file →": "打开案例档案 →",
   /* philosophy */
-  "Ten": "均衡投资",
-  "commandments": "十诫",
-  "of balanced investment.": "",
-  "The firm's investment doctrine, inherited from two decades of practice and codified by Chairman Xiong. It is the filter through which every proposal, every follow-on and every exit decision is made.": "公司投资准则，承自二十年实践，由熊钢董事长成文。每一次立项、追加与退出的决策均由此过滤。",
-  "Be early.": "早期发现。",
-  "Be": "先于市场",
-  "balanced.": "投资。",
-  "Be active.": "主动管理。",
-  "Venture capital — practiced properly — is an exercise in patience, pacing and principled selection. The firm does not chase trends; it constructs portfolios.": "真正的风险投资，是耐心、节奏与原则化筛选的训练。公司不追潮流——我们构建组合。",
-  "\"Capital is a clumsy instrument of belief. Discipline is what makes it intelligent.\"": "\"资本是信念的笨拙载体——纪律让它变得聪明。\"",
+  "of balanced investment.": "（均衡投资）",
+  "The firm's investment doctrine, inherited from two decades of practice and codified by Chairman Xiong. It is the filter through which every proposal, every follow-on and every exit decision is made.": "源自二十余年实践、由熊钢董事长成文化的投资准则。每一次立项、追加与退出决策，都以此为筛。",
+  "Venture capital — practiced properly — is an exercise in patience, pacing and principled selection. The firm does not chase trends; it constructs portfolios.": "真正的风险投资，是关于耐心、节奏与原则化筛选的长期训练。我们不追逐热点，我们构建组合。",
+  "\"Capital is a clumsy instrument of belief. Discipline is what makes it intelligent.\"": "“资本是信念的笨拙工具；纪律让它变得聪明。”",
   /* principles */
-  "Early detection.": "早期发现。",
-  "We meet companies before the consensus does — at the proof-of-concept or first-revenue stage — and commit capital when the risk–return asymmetry is greatest.": "我们在共识形成之前就与企业见面——在概念验证或首次营收阶段——并在风险-回报不对称性最大的时点下注。",
-  "Investing in advance.": "先于市场投资。",
-  "We invest ahead of the cycle, not into it. Pacing and sizing are set by our own view of the industrial clock, not by the market's short-term mood.": "我们在周期之前投资，而非随周期而动。节奏与规模由我们对产业时钟的判断决定，不受市场短期情绪左右。",
-  "Balanced portfolio.": "均衡组合。",
-  "Every fund is constructed to balance stage, sector and geography. No single position, sector or vintage can jeopardize the whole.": "每一只基金在阶段、行业与地域上均衡构建。任何单一头寸、行业或代际都不足以影响整体。",
-  "Active risk management.": "主动风控。",
-  "We treat risk as something to be continuously re-underwritten, not set once at entry. Governance, cadence and exit optionality are the disciplines.": "我们把风险视为持续再承销的对象，而非投资入场时一次设定。治理、节奏与退出可选性是关键纪律。",
-  "Differentiated sourcing.": "差异化获取。",
-  "Our deal flow is originated — not intermediated. We invest where our operating network and STEM judgement give us an edge that capital alone cannot buy.": "我们的项目由自身发掘——而非中介转手。在我们的运营网络与科技判断能带来资本之外优势的领域投资。",
-  "STEM-native judgement.": "科技为本的判断。",
-  "Technical depth sits on the investment committee, not adjacent to it. We underwrite science, not slides.": "技术深度驻于投委会内部，而非旁侧。我们承销的是科学，而非演示。",
-  "Long horizons.": "长期视野。",
-  "We align with founders on a decade-plus basis. Exits are the consequence of value created, not the objective.": "我们与创始人以十年以上为周期共同经营。退出是价值创造的结果，不是目的。",
-  "Governance as a product.": "治理即产品。",
-  "We staff, mentor and equip our companies. Portfolio-management is an operating discipline inside the firm, not an afterthought.": "我们为被投企业配置人员、提供辅导与工具。组合管理是公司内部的运营纪律，而非事后补救。",
-  "Reputational compounding.": "声誉复利。",
-  "The firm's most valuable asset is the trust of its founders and its limited partners. Every decision is filtered through that lens.": "公司最宝贵的资产，是创始人与有限合伙人的信任。每一次决策都以此为滤镜。",
-  "Faith in venture.": "对风险投资的信仰。",
-  "Venture capital is a practice, not a product. It demands conviction, patience, and the willingness to be early and alone.": "风险投资是一种实践，不是一种产品。它需要信念、耐心，以及愿意在早期独自前行。",
+  "Early detection.": "早期发现",
+  "We meet companies before the consensus does — at the proof-of-concept or first-revenue stage — and commit capital when the risk–return asymmetry is greatest.": "我们在共识形成之前就与公司相遇——在概念验证或首次营收阶段——在风险/回报不对称最显著的时点下注。",
+  "Investing in advance.": "前瞻投资",
+  "We invest ahead of the cycle, not into it. Pacing and sizing are set by our own view of the industrial clock, not by the market's short-term mood.": "我们在周期之前布局，而不是追着周期跑。节奏与仓位由我们对产业时钟的判断决定，而非市场短期情绪。",
+  "Balanced portfolio.": "组合均衡",
+  "Every fund is constructed to balance stage, sector and geography. No single position, sector or vintage can jeopardize the whole.": "每只基金都在阶段、行业与地域上做均衡配置，避免单一头寸、行业或代际影响整体。",
+  "Active risk management.": "主动风控",
+  "We treat risk as something to be continuously re-underwritten, not set once at entry. Governance, cadence and exit optionality are the disciplines.": "我们把风险视为需要持续再承销的对象，而非入场时一次定论。治理、节奏与退出选项，是我们的纪律。",
+  "Differentiated sourcing.": "差异化获取",
+  "Our deal flow is originated — not intermediated. We invest where our operating network and STEM judgement give us an edge that capital alone cannot buy.": "项目来自自发挖掘而非中介转手。我们投向那些需要运营网络与科技判断力、而不是单纯靠资本就能买到的优势所在。",
+  "STEM-native judgement.": "科技为本的判断",
+  "Technical depth sits on the investment committee, not adjacent to it. We underwrite science, not slides.": "技术深度就在投委会内部，而不是“旁边的顾问”。我们承销科学与工程事实，不承销 PPT。",
+  "Long horizons.": "长期视野",
+  "We align with founders on a decade-plus basis. Exits are the consequence of value created, not the objective.": "我们与创始人以十年以上为周期对齐。退出是价值创造的结果，而不是目标本身。",
+  "Governance as a product.": "治理即产品",
+  "We staff, mentor and equip our companies. Portfolio-management is an operating discipline inside the firm, not an afterthought.": "我们在团队、辅导与工具上持续投入。组合管理是一项机构内生的运营纪律，而非事后补救。",
+  "Reputational compounding.": "声誉复利",
+  "The firm's most valuable asset is the trust of its founders and its limited partners. Every decision is filtered through that lens.": "机构最重要的资产，是创始人与 LP 的信任。每一个决定，都要经得起这道滤镜。",
+  "Faith in venture.": "对风投的信仰",
+  "Venture capital is a practice, not a product. It demands conviction, patience, and the willingness to be early and alone.": "风险投资是一种实践，而非一件产品。它需要信念、耐心，以及在早期敢于独自前行的勇气。",
   /* team bios */
-  "Founder of ASB Ventures. Chairs the firm's Investment Committee and sets the framework for all capital allocation decisions.": "澳银资本创始人。担任公司投资决策委员会主席，确立公司所有资本配置决策的框架。",
-  "A VC practitioner since 2003, Mr. Xiong established the firm in Auckland and led its 2009 entry into mainland China through the ASBV Wabao Fund. He is the architect of the firm's 'differentiated and balanced' investment doctrine.": "自2003年起从事风险投资，熊钢先生在奥克兰创立公司，并于2009年通过澳银华宝基金率队进入中国大陆市场。他是公司\"差异化与均衡化\"投资准则的构建者。",
-  "Frequent public commentator on venture capital theory, risk management, and the practice of STEM-focused investing.": "长期就风险投资理论、风险管理与科技投资实践公开发声。",
-  "Co-founder and Director. Member of the Investment Committee with a particular focus on fund formation, cross-border vehicles, and LP relationships.": "公司联合创始人兼董事。投委会成员，专注于基金设立、跨境投资架构与有限合伙人关系。",
-  "Career spans private equity structuring between New Zealand, Hong Kong and mainland China.": "职业生涯横跨新西兰、香港与中国大陆的私募股权架构设计。",
-  "Co-founder and Director. Member of the Investment Committee.": "公司联合创始人兼董事。投委会成员。",
-  "Brings decades of operating and governance experience across the firm's portfolio, particularly in the medical and industrial sectors.": "在公司被投组合中具备数十年运营与治理经验，尤其专注于医疗与工业板块。",
-  "Co-CEO of ASB Ventures, jointly appointed in 2024. Leads the firm's healthcare and biotech investment practice.": "澳银资本联席首席执行官，于2024年共同履新。主导公司医疗与生物科技投资业务。",
-  "Responsible for origination, committee process, and active portfolio governance across the medical and life-science verticals.": "负责医疗与生命科学垂直领域的项目获取、投委流程与主动组合治理。",
-  "Co-CEO of ASB Ventures, jointly appointed in 2024. Leads the firm's information technology, AI and advanced manufacturing practice.": "澳银资本联席首席执行官，于2024年共同履新。主导公司信息技术、人工智能与先进制造业务。",
-  "Drives the firm's operating platform — value creation, exit pathways, and the STEM-VC research program.": "推动公司运营平台——价值创造、退出路径与科技风投研究项目。",
+  "Founder of ASB Ventures. Chairs the firm's Investment Committee and sets the framework for all capital allocation decisions.": "澳银资本创始人。担任投资决策委员会主席，制定资本配置的总体框架。",
+  "A VC practitioner since 2003, Mr. Xiong established the firm in Auckland and led its 2009 entry into mainland China through the ASBV Wabao Fund. He is the architect of the firm's 'differentiated and balanced' investment doctrine.": "自 2003 年起从事风险投资。熊钢先生在奥克兰创立机构，并于 2009 年通过澳银华宝基金带领团队进入中国大陆市场；他也是机构「差异化与均衡化」投资准则的提出者与体系化建设者。",
+  "Frequent public commentator on venture capital theory, risk management, and the practice of STEM-focused investing.": "长期就风投理论、风险管理与科技投资实践公开发声。",
+  "Co-founder and Director. Member of the Investment Committee with a particular focus on fund formation, cross-border vehicles, and LP relationships.": "联合创始人、董事。投委会成员，专注基金设立、跨境架构与 LP 关系。",
+  "Career spans private equity structuring between New Zealand, Hong Kong and mainland China.": "职业经历横跨新西兰、香港与中国大陆的股权投资与架构设计。",
+  "Co-founder and Director. Member of the Investment Committee.": "联合创始人、董事。投委会成员。",
+  "Brings decades of operating and governance experience across the firm's portfolio, particularly in the medical and industrial sectors.": "在被投组合中拥有数十年运营与治理经验，尤其聚焦医疗与工业领域。",
+  "Co-CEO of ASB Ventures, jointly appointed in 2024. Leads the firm's healthcare and biotech investment practice.": "澳银资本联席 CEO（2024 年共同履新）。主导医疗与生物科技投资。",
+  "Responsible for origination, committee process, and active portfolio governance across the medical and life-science verticals.": "负责生命科学方向的项目获取、投委流程与主动治理。",
+  "Co-CEO of ASB Ventures, jointly appointed in 2024. Leads the firm's information technology, AI and advanced manufacturing practice.": "澳银资本联席 CEO（2024 年共同履新）。主导信息技术、人工智能与先进制造投资。",
+  "Drives the firm's operating platform — value creation, exit pathways, and the STEM-VC research program.": "推动机构运营平台：价值创造、退出路径与 STEM-VC 研究体系。",
   /* news + papers */
-  "Commentary": "评述",
+  "Commentary": "观点",
   "Working paper": "工作论文",
   "Research memo": "研究备忘",
   "Field guide": "实务手册",
-  "Two Female Partners Jointly Appointed as Co-CEOs at ASBV": "两位女性合伙人共同履新澳银联席CEO",
-  "ASB Ventures announces the joint appointment of Ms. Yan Hu and Ms. Mengke Lu as Managing Partners and Co-CEOs, consolidating the firm's operating leadership for the next decade.": "澳银资本宣布胡焱女士与陆蒙可女士共同获任管理合伙人兼联席首席执行官，巩固公司未来十年的运营领导层。",
-  "Chairman Sam Xiong's extended essay on discipline, pacing, and what it takes to practice venture capital across a full cycle.": "熊钢董事长关于纪律、节奏与跨周期践行风险投资的长文。",
-  "Thorough Images closes Series B for full-peptide discovery": "索思图像完成B轮融资，推进全肽发现平台",
-  "ASB Ventures leads a strategic round into the firm's longstanding peptide-platform bet.": "澳银资本领投公司长期布局的肽平台战略轮次。",
-  "The STEM-VC thesis, revisited for the 2026–2030 cycle.": "2026–2030周期下重新审视的科技风投命题。",
-  "Why balance is the only durable form of alpha in early-stage China.": "为何均衡是中国早期投资唯一可持续的超额收益来源。",
-  "Active risk management in a venture portfolio — a practitioner's field guide.": "风投组合中的主动风险管理——实务手册。",
+  "Two Female Partners Jointly Appointed as Co-CEOs at ASBV": "两位女性合伙人共同出任澳银资本联席 CEO",
+  "ASB Ventures announces the joint appointment of Ms. Yan Hu and Ms. Mengke Lu as Managing Partners and Co-CEOs, consolidating the firm's operating leadership for the next decade.": "澳银资本宣布胡焱女士与陆蒙可女士共同获任管理合伙人兼联席首席执行官，为未来十年的运营与治理奠定更稳固的领导结构。",
+  "Chairman Sam Xiong's extended essay on discipline, pacing, and what it takes to practice venture capital across a full cycle.": "熊钢董事长关于纪律、节奏，以及如何跨周期践行风险投资的长文。",
+  "Thorough Images closes Series B for full-peptide discovery": "索思图像完成 B 轮融资，推进全肽发现平台",
+  "ASB Ventures leads a strategic round into the firm's longstanding peptide-platform bet.": "澳银资本领投其长期布局的多肽平台项目战略轮融资。",
+  "The STEM-VC thesis, revisited for the 2026–2030 cycle.": "面向 2026–2030 周期重述 STEM-VC 命题。",
+  "Why balance is the only durable form of alpha in early-stage China.": "为何“均衡”是中国早期投资最可持续的 Alpha。",
+  "Active risk management in a venture portfolio — a practitioner's field guide.": "风投组合的主动风险管理：实务手册。",
   /* portfolio notes */
-  "Vaccine development; strategic public-market outcome.": "疫苗研发；战略性公开市场退出。",
-  "Chemiluminescence IVD platform.": "化学发光体外诊断平台。",
+  "Vaccine development; strategic public-market outcome.": "疫苗研发；战略性上市退出。",
+  "Chemiluminescence IVD platform.": "化学发光 IVD 平台。",
   "API and pharmaceutical intermediates.": "原料药与医药中间体。",
-  "Polarizer film for LCD panels.": "LCD面板用偏光片材料。",
+  "Polarizer film for LCD panels.": "LCD 偏光片材料。",
   "Digital media and creative tooling.": "数字媒体与创意工具。",
   "Video conferencing and collaboration.": "视频会议与协作。",
   "Environmental remediation services.": "环境修复服务。",
-  "Ecological engineering at national scale.": "国家级生态工程。",
+  "Ecological engineering at national scale.": "大规模生态工程。",
   "Global cross-border payment infrastructure.": "全球跨境支付基础设施。",
-  "Designer IP and collectibles.": "潮玩IP与收藏品。",
+  "Designer IP and collectibles.": "设计师 IP 与收藏品。",
   "Boundary-layer modeling for fluid dynamics.": "流体力学边界层建模。",
-  "Peptide discovery; full-peptide libraries.": "多肽发现；全肽库平台。",
+  "Peptide discovery; full-peptide libraries.": "多肽发现与全肽库平台。",
   "Precision electromechanical systems.": "精密机电系统。",
   "Cell-therapy platform.": "细胞治疗平台。",
   "Next-generation surgical energy devices.": "新一代手术能量器械。",
-  "PET-CT detector engineering.": "PET-CT探测器工程。",
+  "PET-CT detector engineering.": "PET-CT 探测器工程。",
   "Parkinson's diagnostic & therapeutic tooling.": "帕金森诊疗工具。",
   "Genetic diagnostics.": "基因诊断。",
   "Reproductive health platform.": "生殖健康平台。",
   "Novel biologics discovery.": "创新生物药发现。",
-  /* ticker headers stay in english */
   /* chairman */
   "Venture capital": "风险投资",
   "as a": "是一种",
   "faith.": "信仰。",
-  "An abridged excerpt from Chairman Sam Xiong's 2024 annual address to the firm's limited partners — reprinted across the firm's 2024 research letters and quoted by leading Chinese financial press.": "摘自熊钢董事长2024年致有限合伙人的年度演讲——被公司2024年度研究信件转载，并被国内主流财经媒体引用。",
-  "Signed": "签名",
+  "An abridged excerpt from Chairman Sam Xiong's 2024 annual address to the firm's limited partners — reprinted across the firm's 2024 research letters and quoted by leading Chinese financial press.": "摘自熊钢董事长 2024 年致 LP 的年度讲话（节选）——曾在年度研究信函中刊载，并被多家主流财经媒体引用。",
+  "Signed": "署名",
   "Gang \"Sam\" Xiong": "熊钢",
   "Founding Partner · Chairman of the Investment Committee": "创始合伙人 · 投资决策委员会主席",
   "Read the full essay →": "阅读全文 →",
   /* team */
   "Investment": "投资决策",
   "Committee.": "委员会",
-  "Five partners make every investment decision the firm underwrites. Between them, more than one hundred years of VC and operating experience across the Asia-Pacific.": "五位合伙人对公司每一笔投资共同决策。他们在亚太地区的风险投资与企业运营经验合计超过一百年。",
-  "Biography": "履历",
+  "Five partners make every investment decision the firm underwrites. Between them, more than one hundred years of VC and operating experience across the Asia-Pacific.": "五位合伙人共同决定机构承销的每一笔投资。合计拥有超过百年的亚太地区风投与运营经验。",
+  "Biography": "简介",
   "Chair, Investment Committee": "投委会主席",
   "Member, Investment Committee": "投委会委员",
-  "Appointed 2024": "2024年履新",
+  "Appointed 2024": "2024 年履新",
   "Founding Partner · Director": "创始合伙人 · 董事",
-  "Managing Partner · Co-CEO": "管理合伙人 · 联席首席执行官",
-  "JOINED · SINCE INCEPTION": "加入 · 自创立之初",
-  "CORRESPONDENCE → office@asbvcap.com": "联络 → office@asbvcap.com",
+  "Managing Partner · Co-CEO": "管理合伙人 · 联席 CEO",
+  "JOINED · SINCE INCEPTION": "加入 · 创立之初",
+  "CORRESPONDENCE → office@asbvcap.com": "联系 → office@asbvcap.com",
   /* history */
-  "From Auckland,": "从奥克兰，",
-  "to": "至",
-  "Shenzhen": "深圳",
-  ", to the world.": "，再至世界。",
-  "Five chapters that shaped the firm.": "塑造公司的五个章节。",
+  "Five chapters that shaped the firm.": "塑造机构的五个关键章节。",
   "Founded in Auckland.": "创立于奥克兰。",
-  "ASB Ventures established by professional VC institutions and senior investors active across the Asia-Pacific.": "澳银资本由活跃于亚太地区的专业风险投资机构与资深投资人共同发起成立。",
+  "ASB Ventures established by professional VC institutions and senior investors active across the Asia-Pacific.": "澳银资本由活跃于亚太地区的专业风投机构与资深投资人共同发起成立。",
   "Entry into China.": "进入中国。",
   "The ASBV Wabao Fund co-founds Shenzhen ASB Ventures Capital Management with China VC Company and Shenzhen United Assets & Equity Exchange.": "澳银华宝基金与中国风险投资公司、深圳联合产权交易所共同发起成立深圳澳银资本管理有限公司。",
   "Controlling acquisition.": "控股收购。",
   "ASBV Wabao Fund completes the controlling acquisition of Shenzhen ASB Ventures Capital Management Co., Ltd.": "澳银华宝基金完成对深圳澳银资本管理有限公司的控股收购。",
-  "15th fund registered.": "第十五只基金登记。",
-  "The firm crosses 15 VC funds registered and under management, with 100+ Chinese companies in the combined portfolio.": "公司在管及登记的风险投资基金突破十五只，组合内已投中国企业超过一百家。",
-  "Co-CEO transition.": "联席首席执行官交棒。",
-  "Yan Hu and Mengke Lu jointly appointed Managing Partners and Co-CEOs, formalizing the firm's next-generation leadership.": "胡焱与陆蒙可共同获任管理合伙人兼联席首席执行官，正式确立公司新一代领导层。",
+  "15th fund registered.": "第 15 支基金登记。",
+  "The firm crosses 15 VC funds registered and under management, with 100+ Chinese companies in the combined portfolio.": "登记与在管基金数量突破 15 支，被投中国企业超过 100 家。",
+  "Co-CEO transition.": "联席 CEO 交棒。",
+  "Yan Hu and Mengke Lu jointly appointed Managing Partners and Co-CEOs, formalizing the firm's next-generation leadership.": "胡焱与陆蒙可共同获任管理合伙人兼联席首席执行官，正式确立新一代领导层。",
   /* research + news */
-  "Working papers": "工作论文",
   "from the": "源自",
   "practice.": "实践。",
-  "A rolling program of memos, field guides and letters — the firm's in-house research output, circulated first to LPs and portfolio founders.": "持续产出的备忘录、实务手册与信件——公司的内部研究输出，首先递送有限合伙人与被投企业创始人。",
-  "Latest from": "公司",
-  "the firm.": "最新动态。",
-  "Firm announcements, portfolio milestones and chairman's commentary — updated as the year unfolds.": "公司公告、组合企业里程碑与董事长评述——随年度节奏更新。",
+  "A rolling program of memos, field guides and letters — the firm's in-house research output, circulated first to LPs and portfolio founders.": "持续发布的备忘录、实务手册与信函——机构内部研究输出，优先在 LP 与被投企业创始人之间流通。",
+  "Latest from": "最新",
+  "the firm.": "动态",
+  "Firm announcements, portfolio milestones and chairman's commentary — updated as the year unfolds.": "机构公告、组合里程碑与董事长观点——随年度节奏更新。",
   "Read": "阅读",
   /* contact */
   "Shenzhen.": "深圳。",
   "Li Ning": "李宁",
   "Center.": "大厦。",
-  "The firm's principal office sits on the twelfth floor of the Li Ning Center, Nanshan District — the heart of Shenzhen's operating technology corridor.": "公司主要办公地点位于深圳市南山区李宁大厦十二层——深圳科技运营走廊的核心地带。",
-  "Say hello.": "与我们联系。",
+  "The firm's principal office sits on the twelfth floor of the Li Ning Center, Nanshan District — the heart of Shenzhen's operating technology corridor.": "主要办公室位于深圳南山区李宁大厦 12 层——深圳科技产业走廊的核心地带。",
+  "Say hello.": "欢迎联系。",
   "Address": "地址",
   "12F, Li Ning Center, No. 9996 Shennan Avenue, Nanshan District, Shenzhen": "深圳市南山区深南大道 9996 号李宁大厦 12 层",
   "Telephone": "电话",
@@ -712,51 +668,35 @@ const ZH = {
   "Press inquiry": "媒体垂询",
   "LI NING CENTER": "李宁大厦",
   /* CTA */
-  "If you are building something": "如果你正在做一件",
-  "genuinely difficult": "真正困难的事",
-  ", we would like to read your first page.": "，我们愿意阅读你的第一页。",
-  "We take early meetings seriously. Every business plan submitted is read by an investment-committee member within fourteen days — and every founder receives a reply, not a form.": "我们认真对待每一次早期接触。提交的每一份商业计划书，都会在十四天内由投委会成员亲自阅读——每一位创始人都会收到答复，而非模板。",
-  "Submit a plan →": "提交计划 →",
+  "We take early meetings seriously. Every business plan submitted is read by an investment-committee member within fourteen days — and every founder receives a reply, not a form.": "我们认真对待每一次早期交流。提交的每一份商业计划书，都会在 14 天内由投委会成员亲自阅读——每一位创始人都会收到明确回复，而不是模板。",
+  "Submit a plan →": "提交计划书 →",
   /* footer */
-  "ASB Ventures (China) Holdings Ltd. — a STEM venture capital firm practicing early-stage, differentiated and balanced investment across the Asia-Pacific since 2003.": "澳银资本（中国）控股有限公司——一家科技风险投资机构，自2003年起在亚太地区践行早期、差异化与均衡化的投资。",
-  "Firm newsletter": "公司通讯",
-  "Firm": "公司",
+  "ASB Ventures (China) Holdings Ltd. — a STEM venture capital firm practicing early-stage, differentiated and balanced investment across the Asia-Pacific since 2003.": "澳银资本（中国）控股有限公司——自 2003 年起在亚太地区践行早期、差异化与均衡化投资的科技风投机构。",
+  "Firm newsletter": "机构通讯",
+  "Firm": "机构",
   "Practice": "业务",
   "History": "历程",
-  "Leadership": "领导层",
+  "Leadership": "团队",
   "Honors": "荣誉",
-  "Chairman's speech": "董事长致辞",
-  "Philosophy": "理念",
   "Portfolio": "组合",
-  "Research": "研究",
-  "Newsroom": "新闻",
-  "Typical cases": "典型案例",
+  "Newsroom": "动态",
   "Shenzhen office": "深圳办公室",
   "Press": "媒体",
-  "中文版 / Chinese site": "English site / 英文站",
   "Privacy · Terms · Disclosures": "隐私 · 条款 · 披露",
   "© 2012–2026 ASB Ventures (China) Holdings Ltd. All rights reserved.": "© 2012–2026 澳银资本（中国）控股有限公司。版权所有。",
-  "WeChat · Follow the firm": "微信 · 关注澳银",
+  "WeChat · Follow the firm": "微信公众号",
   "Scan to follow ASBV on WeChat": "扫码关注澳银资本",
   /* modals */
   "Thank you.": "感谢订阅。",
   "Subscribe.": "订阅通讯。",
-  "Your subscription is confirmed. The next research letter is sent on the first Monday of the quarter.": "您的订阅已确认。下一期研究信件将在本季度首个周一寄出。",
-  "Four times a year, ASB Ventures publishes a short letter from the Investment Committee — practice notes, portfolio updates, and the chairman's view of the cycle.": "每年四次，澳银资本由投委会发布一封简短的信件——实务笔记、组合更新与董事长对周期的看法。",
-  "THE FIRM · QUARTERLY": "公司 · 季刊",
+  "Your subscription is confirmed. The next research letter is sent on the first Monday of the quarter.": "订阅已确认。下一期研究信函将于本季度第一个周一发送。",
+  "Four times a year, ASB Ventures publishes a short letter from the Investment Committee — practice notes, portfolio updates, and the chairman's view of the cycle.": "每年四次，澳银资本发布投委会简报：实务笔记、组合更新，以及董事长对周期的判断。",
+  "THE FIRM · QUARTERLY": "机构通讯 · 季刊",
   "Subscribe →": "订阅 →"
 };
 
-const t = (en, lang) => {
-  if (lang !== "zh") return en;
-  return ZH[en] || en;
-};
-
-/* Hook: reactive translator */
-const useT = () => {
-  const { lang } = useLang();
-  return (en) => t(en, lang);
-};
+const t = (en) => ZH[en] || en;
+const useT = () => (en) => t(en);
 
 const TWEAKS = /*EDITMODE-BEGIN*/{
   "theme": "dark",
@@ -802,7 +742,6 @@ const TEAM = [
 
 }];
 
-
 const PORTFOLIO = [
 { name: "Biokangtai", ticker: "SZ 300601", sector: "Medical & Health", status: "Listed", note: "Vaccine development; strategic public-market outcome." },
 { name: "Shenzhen New Industries", ticker: "SZ 300832", sector: "Medical & Health", status: "Listed", note: "Chemiluminescence IVD platform." },
@@ -825,14 +764,12 @@ const PORTFOLIO = [
 { name: "keye-life", ticker: "Early", sector: "Medical & Health", status: "Active", note: "Reproductive health platform." },
 { name: "Dartmon", ticker: "Early", sector: "Medical & Health", status: "Active", note: "Novel biologics discovery." }];
 
-
 const SECTORS = [
 { n: "01", title: "Medical & Health", body: "Therapeutics, diagnostics, devices and cell therapy. The firm's largest and longest-running practice.", co: "28 COMPANIES" },
 { n: "02", title: "Information Tech", body: "Enterprise software, industrial IT and the computing fabric underneath China's productive economy.", co: "19 COMPANIES" },
 { n: "03", title: "AI & Manufacture", body: "Vertical AI applied to physical plants, precision mechatronics, and adjacent frontier hardware.", co: "22 COMPANIES" },
 { n: "04", title: "Energy & Env. Tech", body: "Decarbonization, ecological engineering and the industrial infrastructure of the energy transition.", co: "14 COMPANIES" },
 { n: "05", title: "Business Innovation", body: "Commerce, payments, creative IP and consumer-facing platforms operating across Asia and globally.", co: "17 COMPANIES" }];
-
 
 const PRINCIPLES = [
 { h: "Early detection.", b: "We meet companies before the consensus does — at the proof-of-concept or first-revenue stage — and commit capital when the risk–return asymmetry is greatest." },
@@ -846,7 +783,6 @@ const PRINCIPLES = [
 { h: "Reputational compounding.", b: "The firm's most valuable asset is the trust of its founders and its limited partners. Every decision is filtered through that lens." },
 { h: "Faith in venture.", b: "Venture capital is a practice, not a product. It demands conviction, patience, and the willingness to be early and alone." }];
 
-
 const NEWS = [
 { date: "08.2024", tag: "Firm", title: "Two Female Partners Jointly Appointed as Co-CEOs at ASBV",
   dek: "ASB Ventures announces the joint appointment of Ms. Yan Hu and Ms. Mengke Lu as Managing Partners and Co-CEOs, consolidating the firm's operating leadership for the next decade." },
@@ -855,12 +791,10 @@ const NEWS = [
 { date: "03.2024", tag: "Portfolio", title: "Thorough Images closes Series B for full-peptide discovery",
   dek: "ASB Ventures leads a strategic round into the firm's longstanding peptide-platform bet." }];
 
-
 const PAPERS = [
 { n: "RP-04 · 2026", title: "The STEM-VC thesis, revisited for the 2026–2030 cycle.", kind: "Working paper", len: "28 pp" },
 { n: "RP-03 · 2025", title: "Why balance is the only durable form of alpha in early-stage China.", kind: "Research memo", len: "12 pp" },
 { n: "RP-02 · 2025", title: "Active risk management in a venture portfolio — a practitioner's field guide.", kind: "Field guide", len: "34 pp" }];
-
 
 const HISTORY = [
 { y: "2003", h: "Founded in Auckland.", p: "ASB Ventures established by professional VC institutions and senior investors active across the Asia-Pacific." },
@@ -869,26 +803,25 @@ const HISTORY = [
 { y: "2019", h: "15th fund registered.", p: "The firm crosses 15 VC funds registered and under management, with 100+ Chinese companies in the combined portfolio." },
 { y: "2024", h: "Co-CEO transition.", p: "Yan Hu and Mengke Lu jointly appointed Managing Partners and Co-CEOs, formalizing the firm's next-generation leadership." }];
 
-
 function Nav({ onOpenNewsletter, onToggleTheme, theme }) {
   const [scrolled, setScrolled] = useState(false);
   const [mega, setMega] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const hideTimer = useRef(null);
-  const { lang, setLang } = useLang();
   const tr = useT();
+
   useEffect(() => {
     const on = () => setScrolled(window.scrollY > 12);
     window.addEventListener('scroll', on);on();
     return () => window.removeEventListener('scroll', on);
   }, []);
   useEffect(() => {
-    // Prevent background scroll when mobile sheet is open.
     if (!mobileOpen) return;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = prev; };
   }, [mobileOpen]);
+
   const open = (k) => {clearTimeout(hideTimer.current);setMega(k);};
   const close = () => {hideTimer.current = setTimeout(() => setMega(null), 180);};
 
@@ -923,13 +856,12 @@ function Nav({ onOpenNewsletter, onToggleTheme, theme }) {
   };
 
   return (
-    <>
     <header className={"nav" + (scrolled ? " scrolled" : "")}>
       <div className="container nav-inner">
         <a href="#" className="logo">
           <div className="logo-mark"><img src="assets/mark.png" alt="ASBV crest" /></div>
           <div>
-            <div className="logo-wm">{lang === "zh" ? "澳银资本" : "ASB Ventures"}</div>
+            <div className="logo-wm">澳银资本</div>
             <div className="logo-sub">{tr("EST. AUCKLAND 2003")}</div>
           </div>
         </a>
@@ -949,16 +881,13 @@ function Nav({ onOpenNewsletter, onToggleTheme, theme }) {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
             }
           </button>
-          <button className="lang lang-toggle" onClick={() => setLang(lang === "en" ? "zh" : "en")} title="Switch language">
-            <b className={lang === "en" ? "on" : ""}>EN</b> · <b className={lang === "zh" ? "on" : ""}>中文</b>
-          </button>
           <button className="pill" onClick={onOpenNewsletter}>{tr("Subscribe")}</button>
           <button
             className="mobile-menu-btn"
             onClick={() => { setMega(null); setMobileOpen(true); }}
-            aria-label={lang === "zh" ? "打开菜单" : "Open menu"}
+            aria-label="打开菜单"
           >
-            <span className="mono" style={{ fontSize: 12, letterSpacing: ".08em" }}>{lang === "zh" ? "菜单" : "Menu"}</span>
+            <span className="mono" style={{ fontSize: 12, letterSpacing: ".08em" }}>菜单</span>
             <span aria-hidden="true" style={{ display: "inline-grid", gap: 3 }}>
               <span style={{ width: 14, height: 1, background: "currentColor", display: "block" }} />
               <span style={{ width: 14, height: 1, background: "currentColor", display: "block" }} />
@@ -988,67 +917,64 @@ function Nav({ onOpenNewsletter, onToggleTheme, theme }) {
           }
         </div>
       </div>
-    </header>
-    <div className={"mobile-sheet" + (mobileOpen ? " open" : "")} role="dialog" aria-modal="true" aria-label={lang === "zh" ? "站点菜单" : "Site menu"}>
-      <div className="backdrop" onClick={() => setMobileOpen(false)} />
-      <div className="panel">
-        <div className="panel-hd">
-          <div className="left">
-            <div className="logo-mark" style={{ width: 38, height: 38 }}><img src="assets/mark.png" alt="ASBV crest" /></div>
-            <div style={{ minWidth: 0 }}>
-              <div className="logo-wm">{lang === "zh" ? "澳银资本" : "ASB Ventures"}</div>
-              <div className="logo-sub" style={{ display: "block", marginTop: 2 }}>{tr("EST. AUCKLAND 2003")}</div>
+      <div className={"mobile-sheet" + (mobileOpen ? " open" : "")} role="dialog" aria-modal="true" aria-label="站点菜单">
+        <div className="backdrop" onClick={() => setMobileOpen(false)} />
+        <div className="panel">
+          <div className="panel-hd">
+            <div className="left">
+              <div className="logo-mark" style={{ width: 38, height: 38 }}><img src="assets/mark.png" alt="ASBV crest" /></div>
+              <div style={{ minWidth: 0 }}>
+                <div className="logo-wm">澳银资本</div>
+                <div className="logo-sub" style={{ display: "block", marginTop: 2 }}>{tr("EST. AUCKLAND 2003")}</div>
+              </div>
             </div>
+            <button className="close" onClick={() => setMobileOpen(false)} aria-label="关闭">×</button>
           </div>
-          <button className="close" onClick={() => setMobileOpen(false)} aria-label={lang === "zh" ? "关闭" : "Close"}>×</button>
-        </div>
-        <div className="panel-bd">
-          <div className="group">
-            <div className="cap">{lang === "zh" ? "浏览" : "Browse"}</div>
-            <a className="item" href="#about" onClick={() => setMobileOpen(false)}>
-              <span>{tr("About")} <small style={{ marginLeft: 10 }}>{lang === "zh" ? "公司概览" : "Overview"}</small></span>
-              <span aria-hidden="true">→</span>
-            </a>
-            <a className="item" href="#philosophy" onClick={() => setMobileOpen(false)}>
-              <span>{tr("Philosophy")} <small style={{ marginLeft: 10 }}>{lang === "zh" ? "投资准则" : "Doctrine"}</small></span>
-              <span aria-hidden="true">→</span>
-            </a>
-            <a className="item" href="#portfolio" onClick={() => setMobileOpen(false)}>
-              <span>{tr("Portfolio")} <small style={{ marginLeft: 10 }}>{lang === "zh" ? "组合企业" : "Companies"}</small></span>
-              <span aria-hidden="true">→</span>
-            </a>
-            <a className="item" href="#news" onClick={() => setMobileOpen(false)}>
-              <span>{tr("News")} <small style={{ marginLeft: 10 }}>{lang === "zh" ? "动态" : "Updates"}</small></span>
-              <span aria-hidden="true">→</span>
-            </a>
-            <a className="item" href="#contact" onClick={() => setMobileOpen(false)}>
-              <span>{tr("Contact")} <small style={{ marginLeft: 10 }}>{lang === "zh" ? "联系方式" : "Office"}</small></span>
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-
-          <div className="group">
-            <div className="cap">{lang === "zh" ? "设置" : "Settings"}</div>
-            <div className="row">
-              <button className="item" style={{ flex: 1 }} onClick={() => onToggleTheme()}>
-                <span>{lang === "zh" ? "切换主题" : "Toggle theme"}</span>
-                <span aria-hidden="true">↺</span>
-              </button>
-              <button className="item" style={{ flex: 1 }} onClick={() => setLang(lang === "en" ? "zh" : "en")}>
-                <span>{lang === "zh" ? "English" : "中文"}</span>
-                <span aria-hidden="true">⇄</span>
+          <div className="panel-bd">
+            <div className="group">
+              <div className="cap">浏览</div>
+              <a className="item" href="#about" onClick={() => setMobileOpen(false)}>
+                <span>{tr("About")} <small style={{ marginLeft: 10 }}>机构概览</small></span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a className="item" href="#philosophy" onClick={() => setMobileOpen(false)}>
+                <span>{tr("Philosophy")} <small style={{ marginLeft: 10 }}>投资准则</small></span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a className="item" href="#portfolio" onClick={() => setMobileOpen(false)}>
+                <span>{tr("Portfolio")} <small style={{ marginLeft: 10 }}>组合企业</small></span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a className="item" href="#news" onClick={() => setMobileOpen(false)}>
+                <span>{tr("News")} <small style={{ marginLeft: 10 }}>更新</small></span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a className="item" href="#contact" onClick={() => setMobileOpen(false)}>
+                <span>{tr("Contact")} <small style={{ marginLeft: 10 }}>办公室</small></span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+            <div className="group">
+              <div className="cap">工具</div>
+              <div className="row">
+                <button className="item" style={{ flex: 1 }} onClick={() => onToggleTheme()}>
+                  <span>切换主题</span>
+                  <span aria-hidden="true">↺</span>
+                </button>
+                <a className="item" style={{ flex: 1 }} href="index.html">
+                  <span>English</span>
+                  <span aria-hidden="true">⇄</span>
+                </a>
+              </div>
+              <button className="item" onClick={() => { setMobileOpen(false); onOpenNewsletter(); }}>
+                <span>{tr("Subscribe")} <small style={{ marginLeft: 10 }}>季刊</small></span>
+                <span aria-hidden="true">↗</span>
               </button>
             </div>
-            <button className="item" onClick={() => { setMobileOpen(false); onOpenNewsletter(); }}>
-              <span>{tr("Subscribe")} <small style={{ marginLeft: 10 }}>{lang === "zh" ? "季度通讯" : "Quarterly letter"}</small></span>
-              <span aria-hidden="true">↗</span>
-            </button>
           </div>
         </div>
       </div>
-    </div>
-    </>);
-
+    </header>);
 }
 
 function Ticker() {
@@ -1074,12 +1000,10 @@ function Ticker() {
         {line}{line}
       </div>
     </div>);
-
 }
 
 function Hero() {
   const tr = useT();
-  const { lang } = useLang();
   return (
     <section className="hero container">
       <div className="hero-grid">
@@ -1087,13 +1011,11 @@ function Hero() {
           <div className="eyebrow" style={{ marginBottom: 32 }}>
             <span style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
               <i style={{ width: 6, height: 6, background: "var(--accent-2)", borderRadius: "50%", display: "inline-block" }} />
-              {lang === "zh" ? "科技风险投资 · 新西兰  →  深圳" : <>STEM Venture Capital · New Zealand &nbsp;→&nbsp; Shenzhen</>}
+              科技风险投资 · 新西兰  →  深圳
             </span>
           </div>
           <h1>
-            {lang === "zh" ? <>早期发现。<br/><em>先于</em>市场投资。<br/><em>均衡</em>而主动。</> : <>Early detecting.<br />
-            <em>Investing</em> in advance.<br />
-            Balanced <span className="amp">&amp;</span> active.</>}
+            早期发现。<br/><em>前瞻</em>投资。<br/><em>均衡</em>且主动。
           </h1>
           <div className="hero-meta">
             <div className="item"><b>2003</b><span>{tr("Founded, Auckland")}</span></div>
@@ -1118,19 +1040,17 @@ function Hero() {
         </aside>
       </div>
     </section>);
-
 }
 
 function Numbers() {
   const tr = useT();
-  const { lang } = useLang();
   return (
     <section className="section" id="about">
       <div className="container">
         <div className="section-hd">
           <div>
             <div className="meta"><i />§ 01 &nbsp; {tr("By the numbers")}</div>
-            <h2>{lang === "zh" ? <>一家以<em>十年</em><br/>丈量的公司，而非以轮次。</> : <>A firm measured in<br /><em>decades</em>, not rounds.</>}</h2>
+            <h2>一家以<em>十年</em><br/>丈量的机构，而非以轮次。</h2>
           </div>
           <div className="right">
             {tr("Since 2003, ASB Ventures has registered and managed more than fifteen venture capital funds, invested in over one hundred Chinese companies, and produced eight public-market outcomes across five sectors — with an operating team jointly led from Shenzhen and Auckland.")}
@@ -1160,19 +1080,17 @@ function Numbers() {
         </div>
       </div>
     </section>);
-
 }
 
 function Sectors() {
   const tr = useT();
-  const { lang } = useLang();
   return (
     <section className="section">
       <div className="container">
         <div className="section-hd">
           <div>
             <div className="meta"><i />§ 02 &nbsp; {tr("What we invest in")}</div>
-            <h2>{lang === "zh" ? <>五个行业，<br/>共同遵循 <em>一套运营准则。</em></> : <>Five sectors,<br />one <em>operating doctrine.</em></>}</h2>
+            <h2>五大赛道，<br/>一套<em>运营准则。</em></h2>
           </div>
           <div className="right">{tr("We invest where the science is genuinely ahead of the market — and where our operating network converts that asymmetry into capital-efficient companies. The firm is deliberately limited to five sectors so every investment committee member can speak to every position.")}</div>
         </div>
@@ -1188,12 +1106,10 @@ function Sectors() {
         </div>
       </div>
     </section>);
-
 }
 
 function Portfolio() {
   const tr = useT();
-  const { lang } = useLang();
   const [filter, setFilter] = useState("All");
   const filters = ["All", "Medical & Health", "Information Tech", "AI & Manufacture", "Energy & Env. Tech", "Business Innovation", "Listed"];
   const items = useMemo(() => PORTFOLIO.filter((p) => filter === "All" || p.sector === filter || filter === "Listed" && p.status === "Listed"), [filter]);
@@ -1203,7 +1119,7 @@ function Portfolio() {
         <div className="section-hd">
           <div>
             <div className="meta"><i />§ 03 &nbsp; {tr("Typical cases")}</div>
-            <h2>{lang === "zh" ? <>二十年的<br/><em>自觉</em>造企业。</> : <>Two decades of<br />deliberate <em>company-building.</em></>}</h2>
+            <h2>二十余年<br/><em>系统性</em>造企业。</h2>
           </div>
           <div className="right">{tr("Selected companies from the firm's active and realized portfolios. Eight have reached the public markets; many more are working their way through the long middle of that journey.")}</div>
         </div>
@@ -1242,12 +1158,10 @@ function Portfolio() {
         </div>
       </div>
     </section>);
-
 }
 
 function Philosophy() {
   const tr = useT();
-  const { lang } = useLang();
   const [open, setOpen] = useState(0);
   return (
     <section className="section" id="philosophy">
@@ -1255,13 +1169,13 @@ function Philosophy() {
         <div className="section-hd">
           <div>
             <div className="meta"><i />§ 04 &nbsp; {tr("Investment philosophy")}</div>
-            <h2>{lang === "zh" ? <>均衡投资<br/><em>十诫</em>。</> : <>Ten <em>commandments</em><br />of balanced investment.</>}</h2>
+            <h2>均衡投资<br/><em>十诫</em>。</h2>
           </div>
           <div className="right">{tr("The firm's investment doctrine, inherited from two decades of practice and codified by Chairman Xiong. It is the filter through which every proposal, every follow-on and every exit decision is made.")}</div>
         </div>
         <div className="philosophy">
           <div className="philosophy-left">
-            <h3>{lang === "zh" ? <>早期发现。<br/>先于市场 <em>投资。</em><br/><em>主动</em>管理。</> : <>Be early.<br />Be <em>balanced.</em><br />Be active.</>}</h3>
+            <h3>早期发现。<br/>前瞻 <em>投资。</em><br/><em>主动</em>管理。</h3>
             <p>{tr("Venture capital — practiced properly — is an exercise in patience, pacing and principled selection. The firm does not chase trends; it constructs portfolios.")}</p>
             <div className="quote">{tr("\"Capital is a clumsy instrument of belief. Discipline is what makes it intelligent.\"")}</div>
           </div>
@@ -1280,19 +1194,17 @@ function Philosophy() {
         </div>
       </div>
     </section>);
-
 }
 
 function Chairman() {
   const tr = useT();
-  const { lang } = useLang();
   return (
     <section className="section">
       <div className="container">
         <div className="section-hd">
           <div>
             <div className="meta"><i />§ 05 &nbsp; {tr("Chairman's speech")}</div>
-            <h2>{lang === "zh" ? <>风险投资<br/>是一种 <em>信仰。</em></> : <>Venture capital<br />as a <em>faith.</em></>}</h2>
+            <h2>风险投资<br/>是一种<em>信仰。</em></h2>
           </div>
           <div className="right">{tr("An abridged excerpt from Chairman Sam Xiong's 2024 annual address to the firm's limited partners — reprinted across the firm's 2024 research letters and quoted by leading Chinese financial press.")}</div>
         </div>
@@ -1300,10 +1212,7 @@ function Chairman() {
           <div className="chairman-ph" style={{ backgroundImage: "url(assets/team/gang-xiong.jpg)" }} />
           <div className="txt">
             <blockquote>
-              {lang === "zh"
-                ? <>风险投资是一种 <em>实践</em>，而非一件产品。它是一种缓慢的习惯——走在前面、保持均衡、拒绝把忙碌误认为进步。二十三年的实践告诉我们：公司最持久的超额收益，不过是持之以恒地把更少的事情做得更好、做得更久——并且是与创始人 <em>并肩</em>，而非居高临下。</>
-                : <>Venture capital is a <em>practice</em>, not a product. It is the slow habit of being early, being balanced, and refusing to confuse motion for progress. Twenty-three years of this practice have taught us that the firm's most durable alpha is simply the discipline to do fewer things, more carefully, over a longer horizon — and to do them <em>alongside</em> the founders, not above them.</>
-              }
+              风险投资是一种 <em>实践</em>，而非一件产品。它是一种缓慢的习惯——走在前面、保持均衡、拒绝把忙碌误认为进步。二十三年的实践告诉我们：机构最持久的超额收益，不过是持之以恒地把更少的事情做得更好、做得更久——并且是与创始人 <em>并肩</em>，而非居高临下。
             </blockquote>
             <div className="sign">
               <div>
@@ -1317,19 +1226,17 @@ function Chairman() {
         </div>
       </div>
     </section>);
-
 }
 
 function Team({ onOpen }) {
   const tr = useT();
-  const { lang } = useLang();
   return (
     <section className="section" id="team">
       <div className="container">
         <div className="section-hd">
           <div>
             <div className="meta"><i />§ 06 &nbsp; {tr("Leadership")}</div>
-            <h2>{lang === "zh" ? <>投资决策<br/>委员会。</> : <>Investment<br />Committee.</>}</h2>
+            <h2>投资决策<br/>委员会。</h2>
           </div>
           <div className="right">{tr("Five partners make every investment decision the firm underwrites. Between them, more than one hundred years of VC and operating experience across the Asia-Pacific.")}</div>
         </div>
@@ -1337,7 +1244,7 @@ function Team({ onOpen }) {
           {TEAM.map((m) =>
           <div className="member" key={m.id} onClick={() => onOpen(m)}>
               <div className="ph" style={{ backgroundImage: `url(${m.img})` }} />
-              <h4>{lang === "zh" ? (m.cn || m.name) : m.name}</h4>
+              <h4>{m.cn || m.name}</h4>
               <div className="role">{tr(m.role)}</div>
               <div className="bio-open">{tr("Biography")}</div>
             </div>
@@ -1345,12 +1252,10 @@ function Team({ onOpen }) {
         </div>
       </div>
     </section>);
-
 }
 
 function TeamModal({ member, onClose }) {
   const tr = useT();
-  const { lang } = useLang();
   if (!member) return null;
   return (
     <div className={"modal open"} onClick={onClose}>
@@ -1359,7 +1264,7 @@ function TeamModal({ member, onClose }) {
         <div className="mph" style={{ backgroundImage: `url(${member.img})` }} />
         <div className="mtxt">
           <small>{tr(member.committee)}</small>
-          <h3>{lang === "zh" ? (member.cn || member.name) : member.name}</h3>
+          <h3>{member.cn || member.name}</h3>
           <div className="r">{tr(member.role)}</div>
           <hr />
           {member.bio.map((b, i) => <p key={i}>{tr(b)}</p>)}
@@ -1371,19 +1276,17 @@ function TeamModal({ member, onClose }) {
         </div>
       </div>
     </div>);
-
 }
 
 function History() {
   const tr = useT();
-  const { lang } = useLang();
   return (
     <section className="section">
       <div className="container">
         <div className="section-hd">
           <div>
             <div className="meta"><i />§ 07 &nbsp; {tr("Timeline")}</div>
-            <h2>{lang === "zh" ? <>从奥克兰，<br/>至 <em>深圳</em>，再至世界。</> : <>From Auckland,<br />to <em>Shenzhen</em>, to the world.</>}</h2>
+            <h2>从奥克兰，<br/>至 <em>深圳</em>，再至世界。</h2>
           </div>
           <div className="right">{tr("Five chapters that shaped the firm.")}</div>
         </div>
@@ -1398,19 +1301,17 @@ function History() {
         </div>
       </div>
     </section>);
-
 }
 
 function Research() {
   const tr = useT();
-  const { lang } = useLang();
   return (
     <section className="section">
       <div className="container">
         <div className="section-hd">
           <div>
             <div className="meta"><i />§ 08 &nbsp; {tr("Research")}</div>
-            <h2>{lang === "zh" ? <>源自 <em>实践</em><br/>的工作论文。</> : <>Working papers<br />from the <em>practice.</em></>}</h2>
+            <h2>源自 <em>实践</em><br/>的工作论文。</h2>
           </div>
           <div className="right">{tr("A rolling program of memos, field guides and letters — the firm's in-house research output, circulated first to LPs and portfolio founders.")}</div>
         </div>
@@ -1419,25 +1320,23 @@ function Research() {
           <div className="paper" key={i}>
               <div className="hdr"><span>{p.n}</span><span>{tr(p.kind)}</span></div>
               <h4>{tr(p.title)}</h4>
-              <div className="foot"><span>PDF · {p.len}</span><span>{lang === "zh" ? "下载 →" : "DOWNLOAD →"}</span></div>
+              <div className="foot"><span>PDF · {p.len}</span><span>下载 →</span></div>
             </div>
           )}
         </div>
       </div>
     </section>);
-
 }
 
 function News() {
   const tr = useT();
-  const { lang } = useLang();
   return (
     <section className="section" id="news">
       <div className="container">
         <div className="section-hd">
           <div>
             <div className="meta"><i />§ 09 &nbsp; {tr("Newsroom")}</div>
-            <h2>{lang === "zh" ? <>公司<br/>最新动态。</> : <>Latest from<br />the firm.</>}</h2>
+            <h2>最新<br/>动态。</h2>
           </div>
           <div className="right">{tr("Firm announcements, portfolio milestones and chairman's commentary — updated as the year unfolds.")}</div>
         </div>
@@ -1455,19 +1354,17 @@ function News() {
         </div>
       </div>
     </section>);
-
 }
 
 function Contact() {
   const tr = useT();
-  const { lang } = useLang();
   return (
     <section className="section" id="contact">
       <div className="container">
         <div className="section-hd">
           <div>
             <div className="meta"><i />§ 10 &nbsp; {tr("Correspondence")}</div>
-            <h2>{lang === "zh" ? <>深圳。<br/><em>李宁</em>大厦。</> : <>Shenzhen.<br /><em>Li Ning</em> Center.</>}</h2>
+            <h2>深圳。<br/><em>李宁</em>大厦。</h2>
           </div>
           <div className="right">{tr("The firm's principal office sits on the twelfth floor of the Li Ning Center, Nanshan District — the heart of Shenzhen's operating technology corridor.")}</div>
         </div>
@@ -1494,34 +1391,30 @@ function Contact() {
         </div>
       </div>
     </section>);
-
 }
 
 function CtaBand() {
   const tr = useT();
-  const { lang } = useLang();
   return (
     <section className="cta-band">
       <div className="container">
-        <h2>{lang === "zh" ? <>如果你正在做一件 <em>真正困难的事</em>，我们愿意阅读你的第一页。</> : <>If you are building something <em>genuinely difficult</em>, we would like to read your first page.</>}</h2>
+        <h2>如果你正在做一件 <em>真正困难的事</em>，我们愿意阅读你的第一页。</h2>
         <div className="sub">
           <p>{tr("We take early meetings seriously. Every business plan submitted is read by an investment-committee member within fourteen days — and every founder receives a reply, not a form.")}</p>
           <a className="btn" href="#contact">{tr("Submit a plan →")}</a>
         </div>
       </div>
     </section>);
-
 }
 
 function Footer({ onOpenNewsletter }) {
   const tr = useT();
-  const { lang, setLang } = useLang();
   return (
     <footer>
       <div className="container">
         <div className="foot-grid">
           <div className="foot-brand">
-            <div className="wm">{lang === "zh" ? "澳银资本" : "ASB Ventures"}</div>
+            <div className="wm">澳银资本</div>
             <p>{tr("ASB Ventures (China) Holdings Ltd. — a STEM venture capital firm practicing early-stage, differentiated and balanced investment across the Asia-Pacific since 2003.")}</p>
             <div className="eyebrow" style={{ color: "var(--muted)", marginBottom: 6 }}>{tr("Firm newsletter")}</div>
             <div className="nl">
@@ -1540,7 +1433,7 @@ function Footer({ onOpenNewsletter }) {
           <div>
             <h5>{tr("Contact")}</h5>
             <a>{tr("Shenzhen office")}</a><a>{tr("Submit a plan")}</a><a>{tr("Careers")}</a><a>{tr("Press")}</a>
-            <a onClick={() => setLang(lang === "zh" ? "en" : "zh")} style={{cursor:"pointer"}}>{tr("中文版 / Chinese site")}</a>
+            <a href="index.html" style={{cursor:"pointer"}}>English site / 英文站</a>
           </div>
           <div className="foot-wechat">
             <h5>{tr("WeChat · Follow the firm")}</h5>
@@ -1552,12 +1445,11 @@ function Footer({ onOpenNewsletter }) {
         </div>
         <div className="foot-sub">
           <div>{tr("© 2012–2026 ASB Ventures (China) Holdings Ltd. All rights reserved.")}</div>
-          <div>{lang === "zh" ? "深圳市澳银资本管理有限公司 · 粤ICP备2022094367号-1" : "深圳市澳银资本管理有限公司 · 粤ICP备2022094367号-1"}</div>
+          <div>深圳市澳银资本管理有限公司 · 粤ICP备2022094367号-1</div>
           <div>{tr("Privacy · Terms · Disclosures")}</div>
         </div>
       </div>
     </footer>);
-
 }
 
 function NewsletterModal({ open, onClose }) {
@@ -1586,7 +1478,6 @@ function NewsletterModal({ open, onClose }) {
         </div>
       </div>
     </div>);
-
 }
 
 function Tweaks({ state, setState, visible }) {
@@ -1595,14 +1486,12 @@ function Tweaks({ state, setState, visible }) {
   ["dark", "Dark (default)", "#0F0F0E", "#F5E9C8"],
   ["light", "Sand (light)", "#E8DFCB", "#1A1712"]];
 
-  // Each accent: [id, label, fill (bright), ink-light — always near-black in light]
   const accents = [
   ["#FDD100", "Crest yellow", "#FDD100", "#1A1712"],
   ["#E6A700", "Amber",        "#E6A700", "#1A1712"],
   ["#D86B1C", "Burnt orange", "#D86B1C", "#1A1712"],
   ["#1C3A2E", "Viridian",     "#1C3A2E", "#1C3A2E"],
   ["#4B6A88", "Slate blue",   "#4B6A88", "#2D4560"]];
-
 
   const applyTheme = (t) => {
     document.body.classList.toggle("light", t === "light");
@@ -1612,10 +1501,8 @@ function Tweaks({ state, setState, visible }) {
     const fill = entry[2], inkLight = entry[3];
     document.documentElement.style.setProperty("--yellow", fill);
     document.documentElement.style.setProperty("--accent", fill);
-    // When on sand, use the deep variant for text. When dark, fill IS text-safe.
     const inkForCurrent = document.body.classList.contains("light") ? inkLight : fill;
     document.documentElement.style.setProperty("--accent-ink", inkForCurrent);
-    // Stash both so we can switch when theme changes
     document.documentElement.dataset.accentFill = fill;
     document.documentElement.dataset.accentInkLight = inkLight;
   };
@@ -1625,7 +1512,6 @@ function Tweaks({ state, setState, visible }) {
     setState(next);
     if (k === "theme") {
       applyTheme(v);
-      // Recompute accent-ink to match new theme
       const fill = document.documentElement.dataset.accentFill;
       const inkLight = document.documentElement.dataset.accentInkLight;
       if (fill && inkLight) {
@@ -1664,7 +1550,6 @@ function Tweaks({ state, setState, visible }) {
         </div>
       </label>
     </div>);
-
 }
 
 function App() {
@@ -1678,26 +1563,16 @@ function App() {
     return TWEAKS;
   });
   const [tweaksVisible, setTweaksVisible] = useState(false);
-  const [lang, setLangState] = useState(() => {
-    try { return localStorage.getItem("asbv_lang") || "en"; } catch(e) { return "en"; }
-  });
-  const setLang = (l) => {
-    setLangState(l);
-    try { localStorage.setItem("asbv_lang", l); } catch(e) {}
-  };
+
   const toggleTheme = () => {
     const next = tweakState.theme === "dark" ? "light" : "dark";
     setTweakState({ ...tweakState, theme: next });
     document.body.classList.toggle("light", next === "light");
     try { localStorage.setItem("asbv_theme", next); } catch(e) {}
   };
-  useEffect(() => {
-    document.body.classList.toggle("zh", lang === "zh");
-    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
-  }, [lang]);
+
   useEffect(() => {
     document.body.classList.toggle("light", tweakState.theme === "light");
-    // Apply persisted accent (from disk/TWEAKS) on mount
     const accent = tweakState.accent;
     if (accent && accent !== "#FDD100") {
       const map = {
@@ -1745,7 +1620,7 @@ function App() {
     return () => io.disconnect();
   }, []);
 
-  return <LangCtx.Provider value={{ lang, setLang }}>
+  return <LangCtx.Provider value={{ lang: "zh" }}>
     <Ticker />
     <Nav onOpenNewsletter={() => setNlOpen(true)} onToggleTheme={toggleTheme} theme={tweakState.theme} />
     <Hero />
@@ -1771,3 +1646,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 </script>
 </body>
 </html>
+
